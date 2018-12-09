@@ -20,6 +20,8 @@ public class Renderer extends BaseComp {
     @Override
     public void keyPressed(KeyEvent e) {
 
+        double times = System.currentTimeMillis();
+
         int amount = 10;
 
         int i = e.getKeyCode();
@@ -39,6 +41,8 @@ public class Renderer extends BaseComp {
             x += amount;
             this.repaint();
         }
+
+        System.out.println(times - System.currentTimeMillis());
 
 
     }
@@ -73,16 +77,25 @@ public class Renderer extends BaseComp {
 
     }
 
+    private boolean renderedGrid = false;
+
     @Override
     public void paint(Graphics g) {
 
-        for (int i = 0; i < 640 * 10; i += 10) {
-            for (int j = 0; j < 640 * 10; j += 10) {
-                g.drawRect(i, j, 10, 10);
+        if(!renderedGrid) {
+
+            for (int i = 0; i < 640 * 10; i += 10) {
+                for (int j = 0; j < 640 * 10; j += 10) {
+                    Color col = new Color(41, 25, 23, 255);
+                    g.setColor(col);
+                    g.drawRect(i, j, 10, 10);
+                }
             }
+            renderedGrid = true;
         }
 
         super.paint(g);
+        g.setColor(Color.BLACK);
         update(g);
 
     }
@@ -99,6 +112,8 @@ public class Renderer extends BaseComp {
 
     @Override
     public void repaint() {
+        this.getGraphics().setColor(new Color(57, 131, 26, 217));
+        this.getGraphics().create(x - 10,y - 10, 10, 10).draw3DRect(x - 10, y - 10,10,10,true);
         super.repaint();
     }
 }

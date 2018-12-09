@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="861ab47c-f932-4b1a-8578-45be8adbba12" name="Default Changelist" comment="" />
+    <list default="true" id="861ab47c-f932-4b1a-8578-45be8adbba12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/out/production/GFX engine frameWork/test/model/IMesh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GFX engine frameWork/test/model/Mesh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/editor/gfx/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/editor/gfx/Renderer.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,13 +59,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/editor/gfx/Renderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-790">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+            <state relative-caret-position="33">
+              <caret line="82" column="30" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#863#864#0" expanded="true" />
                 <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#1672#1673#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,6 +88,9 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
     <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
@@ -113,7 +119,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="20" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -201,15 +207,6 @@
             <path>
               <item name="GFX engine frameWork" type="b2602c69:ProjectViewProjectNode" />
               <item name="GFX engine frameWork" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="GFX engine frameWork" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GFX engine frameWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GFX engine frameWork" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -252,7 +249,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544359233808" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544367908043" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Groovy JUnit" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
@@ -327,7 +324,7 @@
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -336,7 +333,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32891247" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891247" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -502,15 +499,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://G:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/java/awt/event/PaintEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://G:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.desktop/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="238" column="19" lean-forward="true" selection-start-line="238" selection-start-column="19" selection-end-line="238" selection-end-column="19" />
+          <folding>
+            <element signature="e#116692#116693#0" expanded="true" />
+            <element signature="e#116739#116740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/editor/gfx/Renderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-790">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="33">
+          <caret line="82" column="30" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#863#864#0" expanded="true" />
             <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#1672#1673#0" expanded="true" />
           </folding>
         </state>
       </provider>
