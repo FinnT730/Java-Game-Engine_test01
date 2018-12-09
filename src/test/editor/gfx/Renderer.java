@@ -1,10 +1,12 @@
 package test.editor.gfx;
 
 import test.editor.BaseComp;
+import test.editor.gfx.testing.Bridge;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.Random;
 
 public class Renderer extends BaseComp {
 
@@ -19,8 +21,6 @@ public class Renderer extends BaseComp {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
-        double times = System.currentTimeMillis();
 
         int amount = 10;
 
@@ -41,8 +41,6 @@ public class Renderer extends BaseComp {
             x += amount;
             this.repaint();
         }
-
-        System.out.println(times - System.currentTimeMillis());
 
 
     }
@@ -106,6 +104,22 @@ public class Renderer extends BaseComp {
 
         g.fillRect(x - 10, y - 10, 10, 10);
 
+        int height = 250;
+
+        int[][] pos = new int[640][640];
+
+        for(int i = 1; i < 640; i += 10) {
+
+
+            pos[i][height] = 1;
+
+            Bridge br = new Bridge(i,height);
+
+
+
+            br.paint(g);
+        }
+
 
     }
 
@@ -114,6 +128,7 @@ public class Renderer extends BaseComp {
     public void repaint() {
         this.getGraphics().setColor(new Color(57, 131, 26, 217));
         this.getGraphics().create(x - 10,y - 10, 10, 10).draw3DRect(x - 10, y - 10,10,10,true);
+        renderedGrid = false;
         super.repaint();
     }
 }
