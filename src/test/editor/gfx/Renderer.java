@@ -20,7 +20,7 @@ public class Renderer extends BaseComp {
     @Override
     public void keyPressed(KeyEvent e) {
 
-        int amount = 2;
+        int amount = 10;
 
         int i = e.getKeyCode();
         if (i == KeyEvent.VK_A) {

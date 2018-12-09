@@ -3,12 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/GFX_engine_frameWork_jar</output-path>
     <root id="archive" name="GFX engine frameWork.jar">
       <element id="module-output" name="GFX engine frameWork" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-stdlib.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-reflect.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-test.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-stdlib-jdk7.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/kotlin-stdlib-jdk8.jar" path-in-jar="/" />
-      <element id="file-copy" path="$APPLICATION_HOME_DIR$/lib/groovy-all-2.4.15.jar" />
     </root>
   </artifact>
 </component>
