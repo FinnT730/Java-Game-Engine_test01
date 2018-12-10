@@ -6,6 +6,7 @@ import test.editor.gfx.testing.Bridge;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Renderer extends BaseComp {
@@ -104,30 +105,23 @@ public class Renderer extends BaseComp {
 
         g.fillRect(x - 10, y - 10, 10, 10);
 
-        int height = 250;
-
-        int[][] pos = new int[640][640];
+        ArrayList<Bridge> bl = new ArrayList<>();
 
         for(int i = 1; i < 640; i += 10) {
 
-
-            pos[i][height] = 1;
-
-            Bridge br = new Bridge(i,height);
-
-
+            Bridge br = new Bridge(i,550);
 
             br.paint(g);
+
+            bl.add(br);
         }
 
-
+        bl.forEach(Bridge::addDrag);
     }
 
 
     @Override
     public void repaint() {
-        this.getGraphics().setColor(new Color(57, 131, 26, 217));
-        this.getGraphics().create(x - 10,y - 10, 10, 10).draw3DRect(x - 10, y - 10,10,10,true);
         renderedGrid = false;
         super.repaint();
     }

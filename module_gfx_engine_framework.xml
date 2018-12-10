@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_gfx_engine_framework" default="compile.module.gfx_engine_framework">
+  <dirname property="module.gfx_engine_framework.basedir" file="${ant.file.module_gfx_engine_framework}"/>
+  
+  <property name="module.jdk.home.gfx_engine_framework" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.gfx_engine_framework" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.gfx_engine_framework" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.gfx_engine_framework" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="gfx_engine_framework.output.dir" value="${module.gfx_engine_framework.basedir}/out/production/GFX engine frameWork"/>
+  <property name="gfx_engine_framework.testoutput.dir" value="${module.gfx_engine_framework.basedir}/out/test/GFX engine frameWork"/>
+  
+  <path id="gfx_engine_framework.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="gfx_engine_framework.module.production.classpath">
+    <path refid="${module.jdk.classpath.gfx_engine_framework}"/>
+    <pathelement location="${idea.home}/lib/groovy-all-2.4.15.jar"/>
+  </path>
+  
+  <path id="gfx_engine_framework.runtime.production.module.classpath">
+    <pathelement location="${gfx_engine_framework.output.dir}"/>
+    <pathelement location="${idea.home}/lib/groovy-all-2.4.15.jar"/>
+  </path>
+  
+  <path id="gfx_engine_framework.module.classpath">
+    <path refid="${module.jdk.classpath.gfx_engine_framework}"/>
+    <pathelement location="${gfx_engine_framework.output.dir}"/>
+    <pathelement location="${idea.home}/lib/groovy-all-2.4.15.jar"/>
+  </path>
+  
+  <path id="gfx_engine_framework.runtime.module.classpath">
+    <pathelement location="${gfx_engine_framework.testoutput.dir}"/>
+    <pathelement location="${gfx_engine_framework.output.dir}"/>
+    <pathelement location="${idea.home}/lib/groovy-all-2.4.15.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.gfx_engine_framework">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.gfx_engine_framework">
+    <patternset refid="excluded.from.module.gfx_engine_framework"/>
+  </patternset>
+  
+  <path id="gfx_engine_framework.module.sourcepath">
+    <dirset dir="${module.gfx_engine_framework.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.gfx_engine_framework" depends="compile.module.gfx_engine_framework.production,compile.module.gfx_engine_framework.tests" description="Compile module GFX engine frameWork"/>
+  
+  <target name="compile.module.gfx_engine_framework.production" description="Compile module GFX engine frameWork; production classes">
+    <mkdir dir="${gfx_engine_framework.output.dir}"/>
+    <javac destdir="${gfx_engine_framework.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.gfx_engine_framework}/javac">
+      <compilerarg line="${compiler.args.gfx_engine_framework}"/>
+      <bootclasspath refid="gfx_engine_framework.module.bootclasspath"/>
+      <classpath refid="gfx_engine_framework.module.production.classpath"/>
+      <src refid="gfx_engine_framework.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.gfx_engine_framework"/>
+    </javac>
+    
+    <copy todir="${gfx_engine_framework.output.dir}">
+      <fileset dir="${module.gfx_engine_framework.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.gfx_engine_framework.tests" depends="compile.module.gfx_engine_framework.production" description="compile module GFX engine frameWork; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.gfx_engine_framework" description="cleanup module">
+    <delete dir="${gfx_engine_framework.output.dir}"/>
+    <delete dir="${gfx_engine_framework.testoutput.dir}"/>
+  </target>
+</project>
