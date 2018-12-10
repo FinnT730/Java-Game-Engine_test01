@@ -35,7 +35,7 @@ public class Bridge extends Component {
         int i = this.getY();
         for(int m = i; m > 0; m -= 5) {
             if((x % m + i) == 1) {
-                x = m;
+                x = i;
                 this.repaint();
             }
         }
