@@ -1,6 +1,6 @@
 package test.editor.memory;
 
-public class Memory {
+public class Memory extends MemData{
 
 
     private Object[] mem = null;
@@ -29,6 +29,11 @@ public class Memory {
     Object getMem() {
         return mem;
     }
-    
+
+    void clean() {
+        mem = null;
+        System.gc();
+    }
+
 
 }

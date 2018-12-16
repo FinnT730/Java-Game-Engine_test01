@@ -2,19 +2,20 @@ package test.editor.gfx;
 
 import test.editor.BaseComp;
 import test.editor.gfx.testing.Bridge;
+import test.editor.memory.Memory;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import java.util.Random;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public class Renderer extends BaseComp {
 
     static int x = 50;
     static int y = 50;
+
+
+    private Memory mem = new Memory();
 
 
     @Override

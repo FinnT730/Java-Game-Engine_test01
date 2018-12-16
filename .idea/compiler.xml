@@ -4,6 +4,9 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="GFX engine frameWork" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="RmicSettings">
     <option name="IS_EANABLED" value="true" />
