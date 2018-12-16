@@ -1,6 +1,18 @@
 <component name="ArtifactManager">
   <artifact type="jar" build-on-make="true" name="GFX engine frameWork:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/GFX_engine_frameWork_jar</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true">
+        <file>file://$PROJECT_DIR$/gfx_engine_framework.xml</file>
+        <target>compile.module.gfx_engine_framework.production</target>
+      </options>
+    </properties>
+    <properties id="ant-preprocessing">
+      <options enabled="true">
+        <file>file://$PROJECT_DIR$/gfx_engine_framework.xml</file>
+        <target>all</target>
+      </options>
+    </properties>
     <root id="archive" name="GFX engine frameWork.jar">
       <element id="module-output" name="GFX engine frameWork" />
     </root>

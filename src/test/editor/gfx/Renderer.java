@@ -8,6 +8,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Renderer extends BaseComp {
 
@@ -117,8 +119,8 @@ public class Renderer extends BaseComp {
         }
 
         bl.forEach(Bridge::addDrag);
-    }
 
+    }
 
     @Override
     public void repaint() {
